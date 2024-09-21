@@ -1,0 +1,19 @@
+﻿@model Department;
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Update Department Data</h1>
+<br />
+<br />
+<form>
+    <div asp-validation-summary="All" class="alert alert-danger"></div>
+    <partial name="PartialView/CreateEditDepartmentPartialView"></partial>
+    <input type="submit" value="Update" class="btn btn-Warning" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+@section section {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

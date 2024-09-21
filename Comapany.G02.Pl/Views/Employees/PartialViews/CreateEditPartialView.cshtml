@@ -1,0 +1,56 @@
+﻿@model EmployeeViewModel;
+@{
+    var departments = new SelectList(@ViewBag.Departments, "Id", "Name");
+}
+<div class="form-control">
+    <label for="name" class="col-form-label">Name</label>
+    <input id="name" type="text" class="form-control" />
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="form-control">
+    <label for="age" class="col-form-label">Age</label>
+    <input id="age" type="text" class="form-control" />
+    <span asp-validation-for="Age"></span>
+
+    <div class="form-control">
+        <label for="addrees" class="col-form-label">Address</label>
+        <input id="addrees" type="text" class="form-control" />
+        <span asp-validation-for="Address"></span>
+    </div>
+    <div class="form-control">
+        <label for="email" class="col-form-label">Email</label>
+        <input id="email" type="text" class="form-control" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="form-control">
+        <label for="phonenumber" class="col-form-label">Phone Number</label>
+        <input id="phonenumber" type="text" class="form-control" />
+        <span asp-validation-for="PhoneNumber"></span>
+    </div>
+    <div class="form-control">
+        <label for="salary" class="col-form-label">Salary</label>
+        <input id="salary" type="number" class="form-control" />
+        <span asp-validation-for="Salary"></span>
+    </div>
+    <div class="form-control">
+        <label for="salary" class="col-form-label">Department</label>
+        <select asp-for="DepartmentId" asp-items="@departments">
+            <option value="@null">
+                ---------select department---------
+            </option>
+        </select>
+        
+    </div>
+    <div class="form-control">
+        <label for="isactive" class="form-check">IsActive</label>
+        <input id="isactive" type="text" class="form-check" />
+        <span asp-validation-for="IsActive"></span>
+    </div>
+    <div class="form-control">
+        <label for="HiringDate" class="col-form-label">Hiring Date</label>
+        <input id="HiringDate" type="text" class="form-control" />
+        <span asp-validation-for="HiringDate"></span>
+    </div>
+
+    <br />
+    <br />
